@@ -125,6 +125,11 @@ section{width: 1280px;
     transform: translateY(-50%);
 }
 
+.thwrap img{position: absolute;
+right: -250px;
+top: 200px
+}
+
 .thTextwrap h3{
     font-size: 28px;
     font-weight: 500;

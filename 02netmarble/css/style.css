@@ -75,12 +75,29 @@ section{width: 1280px;
     font-size: 18px;
 }
 
-.slideWrap {position: relative;}
+.slide {position: relative;
+}
 
-.sliderWrap li .txtWrap{
+.sliderWrap .sItem{
+    height: 100vh;
+    min-height: 400px;
+}
+
+.sliderWrap .txtWrap{
     position: absolute;
-    left: 0;
+    left: 0px;
     top: 50%;
+    transform: translateY(-50%);
+}
+
+.txtWrap h3{
+    font-size: 80px;
+    color: white;
+}
+
+.txtWrap p{
+    font-size: 24px;
+    color: white;
 }
 
 /* second Content */
@@ -121,27 +138,29 @@ section{width: 1280px;
     background: #ffd44a;
     position: relative;
     width: 1114px;
-    height: 338px;
+    height: 339px;
     padding: 0 16px;
 }
 
 .thTextwrap{
     position: absolute;
-    width: 500px;
+    width: 550px;
     top: 50%;
     left: 100px;
     transform: translateY(-50%);
 }
 
-.thwrap img{position: absolute;
-right: -250px;
-top: 200px
+.img33{
+    position: absolute;
+    right: 30px;
+    top: 36%;
 }
 
 .thTextwrap h3{
     font-size: 28px;
     font-weight: 500;
     line-height: 40px;
+    margin-bottom: 20px;
 }
 
 .thTextwrap b{

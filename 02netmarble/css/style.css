@@ -75,6 +75,14 @@ section{width: 1280px;
     font-size: 18px;
 }
 
+.slideWrap {position: relative;}
+
+.sliderWrap li .txtWrap{
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
 /* second Content */
 
 .secContent ul li{
@@ -137,5 +145,5 @@ top: 200px
 }
 
 .thTextwrap b{
-    font-weight: 700;
+    font-weight: 700px;
 }

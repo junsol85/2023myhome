@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 </head>
 
@@ -29,42 +30,44 @@
 
 
     <div class="slideWrap">
-        <ul class="slide">
-            <li style="background-image:url(/02netmarble/images/banner01.jpg)" class="sItem">
-                <div class="txtWrap">
-                    <h3>게임소통학교</h3>
-                    <p>게임으로 소통하고 게임으로 가까워지는 가족</p>
-                </div>
-            </li>
-            <li style="background-image:url(/02netmarble/images/banner05.jpg)" class="sItem">
-                <div class="txtWrap">
-                    <h3>전국 장애학생<br>
-                    e페스티벌</h3>
-                    <p>게임안에서 하나되는 모두의 축제</p>
-                </div>
-            </li>
-            <li style="background-image:url(/02netmarble/images/banner02.jpg)" class="sItem">
-                <div class="txtWrap">
-                    <h3>견학프로그램</h3>
-                    <p>나의 게임 산업 탐방기</p>
-                </div>
-            </li>
-            <li style="background-image:url(/02netmarble/images/banner04.jpg)" class="sItem">
-                <div class="txtWrap">
-                    <h3>게임아카데미</h3>
-                    <p>미래의 꿈 게임에 담다</p>
-                </div>
-            </li>
-            <li style="background-image:url(/02netmarble/images/banner03.jpg)" class="sItem">
-                <div class="txtWrap">
-                    <h3>어깨동무문고</h3>
-                    <p>다름을 이해하는 모두의 동화</p>
-                </div>
-            </li>
-        </ul>
+        <div class="slideWd">
+            <ul class="slide">
+                <li style="background-repeat: no-repeat; background-size: cover; background-image:url(/02netmarble/images/banner01.jpg)" class="sItem">
+                    <div class="txtWrap">
+                        <h3>게임소통학교</h3>
+                        <p>게임으로 소통하고 게임으로 가까워지는 가족</p>
+                    </div>
+                </li>
+                <li style="background-repeat: no-repeat; background-size: cover; background-image:url(/02netmarble/images/banner05.jpg)" class="sItem">
+                    <div class="txtWrap">
+                        <h3>전국 장애학생<br>
+                            e페스티벌</h3>
+                        <p>게임안에서 하나되는 모두의 축제</p>
+                    </div>
+                </li>
+                <li style="background-repeat: no-repeat; background-size: cover; background-image:url(/02netmarble/images/banner02.jpg)" class="sItem">
+                    <div class="txtWrap">
+                        <h3>견학프로그램</h3>
+                        <p>나의 게임 산업 탐방기</p>
+                    </div>
+                </li>
+                <li style="background-repeat: no-repeat; background-size: cover; background-image:url(/02netmarble/images/banner04.jpg)" class="sItem">
+                    <div class="txtWrap">
+                        <h3>게임아카데미</h3>
+                        <p>미래의 꿈 게임에 담다</p>
+                    </div>
+                </li>
+                <li style="background-repeat: no-repeat; background-size: cover; background-image:url(/02netmarble/images/banner03.jpg)" class="sItem">
+                    <div class="txtWrap">
+                        <h3>어깨동무문고</h3>
+                        <p>다름을 이해하는 모두의 동화</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
-<!-- content first -->
+    <!-- content first -->
     <div class="content container">
         <div class="cWrap">
             <h3>문화를 만들고 인재를 키우고<br>
@@ -77,7 +80,7 @@
         </div>
     </div>
 
-<!-- content second -->
+    <!-- content second -->
     <div class="secContent container">
         <ul class="clearfix">
             <li>
@@ -107,7 +110,7 @@
         </ul>
     </div>
 
-<!-- content third -->
+    <!-- content third -->
     <div class="thContent container">
         <div class="thwrap">
             <div class="thTextwrap">
@@ -121,20 +124,90 @@
         </div>
     </div>
 
-<!-- swiper  -->
+    <!-- 재단소식 -->
 
+    <div class="news">
+        <h2>재단소식</h2>
+    </div>
 
-        
+    <!-- swiper  -->
+    <div class="sWrap">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="iWrap">
+                        <div class="imgWrap" style="background-image:url(images/img1.jpg)">
+                        </div>
+                        <div class="tWrap">
+                            <h3>넷마블문화재단 사업기획 및 운영<br>담당자 모집</h3>
+                            <p>넷마블문화재단에서 아래와 같이 새로운 직원을 모집합니다. 많은 분들의 지원 바랍니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="iWrap">
+                        <div class="imgWrap" style="background-image:url(images/img1.jpg)">
+                        </div>
+                        <div class="tWrap">
+                            <h3>2022년 기부금품 모집완료내역<br>보고</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, maxime?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="iWrap">
+                        <div class="imgWrap" style="background-image:url(images/img1.jpg)">
+                        </div>
+                        <div class="tWrap">
+                            <h3>2022 함께하는 게임소통학교 모집 (심화교육)</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, maxime?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="iWrap">
+                        <div class="imgWrap" style="background-image:url(images/img1.jpg)">
+                        </div>
+                        <div class="tWrap">
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, maxime?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bottom -->
+    <footer id="ft">
+        <div class="fWrap container">
+            <div class="logoimg" style="background-image: ;"></div>
+        </div>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script>
-         $(document).ready(function(){
+        $(document).ready(function () {
             $(".slide").bxSlider({
-                auto:true
+                auto: true
             });
         })
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true
+            // pagination: {
+            //     el: ".swiper-pagination",
+            //     clickable: true,
+            // }
+        });
     </script>
 </body>
 

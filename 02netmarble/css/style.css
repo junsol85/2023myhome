@@ -75,30 +75,37 @@ section{width: 1280px;
     font-size: 18px;
 }
 
-.slide {position: relative;
-}
-
-.sliderWrap .sItem{
+.slideWrap .slide li {
     height: 100vh;
     min-height: 400px;
+    position: relative;
+    overflow: hidden;
+
 }
 
-.sliderWrap .txtWrap{
+.slideWrap .sItem {
+    height: 100vh;
+    min-height: 400px;
+
+}
+
+.slideWrap .txtWrap0 {
     position: absolute;
-    left: 0px;
+    left: 350px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.txtWrap h3{
+.slideWrap .txtWrap0 h3 {
     font-size: 80px;
     color: white;
 }
 
-.txtWrap p{
+.slideWrap .txtWrap0 p {
     font-size: 24px;
     color: white;
 }
+
 
 /* second Content */
 

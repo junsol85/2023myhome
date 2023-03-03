@@ -79,8 +79,11 @@ body{
     font-size: 18px;
 }
 
+<<<<<<< HEAD
 /* silde */
 
+=======
+>>>>>>> 1923fe11f2872673bbff4986c2f2f1b9ca24cf86
 .slideWrap .slide li {
     height: 100vh;
     min-height: 400px;

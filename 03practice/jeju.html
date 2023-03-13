@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>:::JEJU_TEST:::</title>
+    <style>
+        /* init */
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* common */
+        .container {
+            margin: 0 auto;
+            width: 1200px;
+        }
+
+        /* index style */
+
+        /* 헤더메뉴 CSS */
+        .hd {
+            display: flex;
+            height: 100px;
+            gap: 50px;
+            background: linear-gradient(264.57deg, #1E56E4 -8.61%, rgba(0, 214, 175, 0.0750201) 120.19%);
+        }
+
+        .logo {
+            width: 250px;
+            cursor: pointer;
+            text-align: center;
+            background: none;
+            padding: 10px;
+        }
+
+        .nav {
+            width: 900px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .nav ul {
+            font-size: 20px;
+            padding-top: 35px;
+        }
+
+        .nav ul a{
+            color: black;
+        }
+
+        .nav ul a:hover {
+            color: white;
+            transition: 0.3s;
+        }
+
+        .nav li {
+            display: none;
+        }
+
+
+        /* 슬라이드 CSS (Swiper) */
+        .sWrap {
+            width: 1200px;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+        }
+
+        /* 콘텐츠 CSS */
+
+        .mWrap {
+            height: 300px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* 텝메뉴 */
+
+        .tabmenu {
+            width: 700px;
+            height: 100%;
+            background: none;
+        }
+
+        .tabsubmenu {
+            padding: 20px;
+            width: 200px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .tabmenu input[type="radio"]{
+            display: none;
+        }
+
+        .tabmenu label{
+            display: inline-block;
+            padding: 15px 25px;
+            text-align: center;
+            color: #aaa;
+            border: 1px solid transparent;
+        }
+
+        .tabContent{
+            border-top: 1px solid #ddd;
+            padding: 25px 0 0;
+        }
+
+        .tabContent h2{
+            display: none;
+        }
+
+        #notice ul{
+            list-style: disc;
+            margin-left: 30px;
+        }
+
+        #notice ul li{
+            font-size: 16px;
+            line-height: 2.5;
+        }
+
+        #gallery{width: 100px;
+                height: 200px;}
+
+        #gallery ul li{
+            display: inline-block;
+        }
+
+        #gallery img{
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /* 빠른메뉴 */
+
+        .quicklink {
+            width: 500px;
+            height: 100%;
+            background: none;
+            padding: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .qLink {
+            width: 130px;
+            height: 130px;
+        }
+
+        .qLink:hover {
+            transition: 0.3s;
+            transform: translate(-5px, -5px);
+            box-shadow: 3px gray;
+        }
+
+        .qLink img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            margin-bottom: 3px;
+        }
+
+        .qLink p {
+            text-align: center;
+        }
+
+        /* 풋터 CSS */
+
+        .ft {
+            width: 100%;
+            height: 100px;
+            background: #333;
+            padding: 10px;
+        }
+
+        .ftWrap,
+        .ftWrap ul li a {
+            color: #eee;
+            font-size: 14px;
+        }
+
+        .ftWrap ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .ftWrap ul li {
+            padding-top: 15px;
+            margin-right: 20px;
+        }
+
+        .ftWrap ul li:nth-child(1)::after {
+            content: "";
+            width: 1px;
+            height: 8px;
+            background-color: #eee;
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: -10px;
+        }
+        .ftWrap ul li:nth-child(2)::after {
+            content: "";
+            width: 1px;
+            height: 8px;
+            background-color: #eee;
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: -10px;
+        }
+        .ftWrap ul li:nth-child(3)::after {
+            content: "";
+            width: 1px;
+            height: 8px;
+            background-color: #eee;
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: -10px;
+        }
+    
+
+        .ftWrap p {
+            margin-top: 10px;
+        }
+
+        .iconWrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .iconWrap a {
+            margin-left: 10px;
+        }
+
+        .iconWrap i {
+            font-size: 20px;
+        }
+
+        .ftWrap,
+        .iconWrap {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .iconWrap .fa-facebook {
+            color: #1773EB;
+        }
+
+        .iconWrap .fa-invision {
+            color: #19CE60;
+        }
+
+        .iconWrap .fa-instagram {
+            color: #EC36AE
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- 해더 -->
+        <header class="hd">
+            <div class="logo"><a href="https://www.jeju.go.kr/index.htm"><img src="img/jeju_logo.png" alt="제주로고"></a>
+            </div>
+            <div class="nav">
+                <ul><a href="#">단체여행</a>
+                    <li><a href="#">패키지</a></li>
+                    <li><a href="#">자유</a></li>
+                    <li><a href="#">땡처리티켓</a></li>
+                </ul>
+                <ul><a href="#">맞춤여행</a>
+                    <li><a href="#">가이드</a></li>
+                    <li><a href="#">일정</a></li>
+                </ul>
+                <ul><a href="#">갤러리</a>
+                    <li><a href="#">회원갤러리</a></li>
+                </ul>
+                <ul><a href="#">문의하기</a>
+                    <li><a href="#">여행사문의</a></li>
+                </ul>
+            </div>
+        </header>
+
+
+        <!-- 슬라이드  -->
+        <div class="sWrap">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/jejus1.jpg" alt="제주1">
+                        <div class="slider-caption">자연경관의 요람,<br> 제주</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/jejus2.jpg" alt="제주2">
+                        <div class="slider-caption">유네스코 자연경관 등록,<br> 제주</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/jejus3.jpg" alt="제주3">
+                        <div class="slider-caption">한반도 원시생태의 보존,<br> 제주</div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+
+        <!-- 콘텐츠 -->
+        <div class="mWrap">
+            <section class="tabmenu">
+                <input type="radio" class="tab1" name="tabs" checked>
+                <label for="tab1">공지사항</label>
+                <input type="radio" class="tab2" name="tabs">
+                <label for="tab1">갤러리</label>
+
+                <div id="notice" class="tabContent">
+                    <h2>공지사항 내용입니다.</h2>
+                    <ul>
+                        <li><a href="#">사무실을 이전했습니다.</a></li>
+                        <li><a href="#">[참가모집] 카약 체험에 초대합니다.</a></li>
+                        <li><a href="#">[참가모집] 여름방학 기간, 오름 체험단을 모집합니다.</a></li>
+                        <li><a href="#">제주 겨울 추천 여행지 BEST 5</a></li>
+                        <li><a href="#">제주 가을 추천 여행지 BEST 5</a></li>
+                    </ul>
+                </div>
+                <div id="gallery" class="tabContent">
+                    <h2>갤러리 내용입니다</h2>
+                    <ul>
+                        <li><img src="img/menu1.jpg" alt="겗"></li>
+                        <li><img src="img/menu2.jpg" alt="겗뷁"></li>
+                        <li><img src="img/menu1.jpg" alt="겗"></li>
+                        <li><img src="img/menu2.jpg" alt="겗뷁"></li>
+                        <li><img src="img/menu1.jpg" alt="겗"></li>
+                        <li><img src="img/menu2.jpg" alt="겗뷁"></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="quicklink">
+                <div class="qLink">
+                    <a href="http://www.jejuforum.or.kr/m14.php">
+                        <img src="img/qimg1.jpg" alt="이미지1">
+                        <p>평화기행</p>
+                    </a>
+                    </a>
+                </div>
+                <div class="qLink">
+                    <a href="https://www.minienmonde.com/2019/07/refresh-mind-body-and-soul-with-forest.html">
+                        <img src="img/qimg2.jpg" alt="이미지2">
+                        <p>힐링 워크샵</p>
+                    </a>
+                </div>
+                <div class="qLink">
+                    <a href="https://www.visitjeju.net/kr/tourInfo/inquiry?tap=one&menuId=DOM_000001703002001001">
+                        <img src="img/qimg3.jpg" alt="이미지3">
+                        <p>문의하기</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- 풋터 -->
+        <footer class="ft">
+            <div class="ftWrap">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+                <P>제주특별자치도 서귀포시 서귀포로 한일타운 103동 206호 (대표전화 123-456-7890)</P>
+            </div>
+            <div class="iconWrap">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.naver.com/"><i class="fa-brands fa-invision"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- WPW JS -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+            autoplay: {
+                delay: 5000, // 5초마다 슬라이드 전환
+                disableOnInteraction: false // 슬라이드를 클릭할 때 자동 슬라이드를 멈추지 않음
+            },
+        });
+    </script>
+</body>
+
+</html>
